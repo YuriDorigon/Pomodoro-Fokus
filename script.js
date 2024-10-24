@@ -8,12 +8,12 @@ const imagem = document.querySelector('.app__image')
 const tempoNaTela = document.getElementById('timer')
 const BtMusica = document.getElementById('alternar-musica')
 const BtIniciar = document.getElementById('start-pause')
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
+const musica = new Audio('./sons/luna-rise-part-one.mp3')
 const iniciarOuPausarBt = document.querySelector('#start-pause span')
 const iconeIniciarOuPausarBt = document.querySelector('.app__card-primary-butto-icon')
-const pause = new Audio('/sons/pause.mp3')
-const playContagem = new Audio('/sons/play.wav')
-const finalizarContagem = new Audio('/sons/beep.mp3')
+const pause = new Audio('./sons/pause.mp3')
+const playContagem = new Audio('./sons/play.wav')
+const finalizarContagem = new Audio('./sons/beep.mp3')
 
 let tempoDecorridoEmSegundos = 1500;
 let intervalo = null
@@ -39,7 +39,7 @@ function textoPrincipal(texto, textostrong) {
 function alterarConteudo(conteudo) {
     mostrarTempo()
     html.setAttribute('data-contexto', conteudo)
-    imagem.setAttribute('src', `/imagens/${conteudo}.png`);
+    imagem.setAttribute('src', `/.imagens/${conteudo}.png`);
     Botoes.forEach(function (conteudo) {
         conteudo.classList.remove('active')
     })
@@ -47,7 +47,7 @@ function alterarConteudo(conteudo) {
 
 function alterarBotao(momento) {
     iniciarOuPausarBt.textContent = `${momento}`
-    iconeIniciarOuPausarBt.setAttribute('src', `/imagens/${momento}.png`);
+    iconeIniciarOuPausarBt.setAttribute('src', `/.imagens/${momento}.png`);
 
 }
 
